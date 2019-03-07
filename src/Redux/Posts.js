@@ -20,4 +20,19 @@ export const actions = {
       post,
     }
   },
+  fetchPosts: function() {
+    return {
+      type: 'FETCH_POSTS'
+    }
+  },
+  failedToFetchPosts: function() {
+    return {
+      type: 'FAILED_TO_FETCH_POSTS'
+    }
+  },
+  successFetchPosts: function() {
+    return {
+      type: 'SUCCESS_FETCH_POSTS'
+    }
+  }
 }

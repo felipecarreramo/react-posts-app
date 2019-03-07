@@ -3,5 +3,5 @@ import { getPosts } from '../Services/Posts'
 
 export function * getPostsSaga(action) {
   const response = yield call(getPosts)
-  console.log(response)
+  console.log('Saga response: ', response)
 }

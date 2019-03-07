@@ -13,10 +13,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getPosts()
-      .then( result => {
-        console.log(result)
-      })
+    this.props.fetchPosts()
   }
 
   createNewPost(post) {
@@ -46,6 +43,7 @@ let mapStateToProps = state => {
 let mapDispatchToProps = dispatch => {
   return {
     createNewPost: post => dispatch( PostsActions.addPost(post) ),
+    fetchPosts: () => dispatch( PostsActions.fetchPosts() ),
   }
 }
 
