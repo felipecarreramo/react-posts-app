@@ -66,3 +66,21 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+# Tags
+## -- Redux
+1. base
+2. store
+3. connect-store-to-app
+4. add-post-action
+5. add-post-view
+6. call-add-post-action
+7. read-posts-store
+8. list-posts-view
+9. list-posts-component
+## -- Sagas
+10. service
+11. sagas-config
+12. sagas-posts
+13. sagas-actions
+14. sagas-actions-result
