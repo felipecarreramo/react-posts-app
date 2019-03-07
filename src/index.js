@@ -2,12 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import store from './Redux'
-import { actions as PostsActions } from './Redux/Posts'
 
-let createdStore = createStore(store)
+import createSagaMiddleware from 'redux-saga';
+import mySagas from './Sagas'
+
+// create the saga middleware
+const sagaMiddleware = createSagaMiddleware()
+
+let createdStore = createStore(store, applyMiddleware(sagaMiddleware))
+
+sagaMiddleware.run(mySagas)
 
 ReactDOM.render(
   <Provider store={ createdStore }>
