@@ -4,11 +4,19 @@ import NewPost from './Components/NewPost';
 import Posts from './Components/Posts';
 import { connect } from 'react-redux';
 import { actions as PostsActions } from './Redux/Posts'
+import { getPosts } from './Services/Posts'
 
 class App extends Component {
 
   state = {
     post: null
+  }
+
+  componentDidMount() {
+    getPosts()
+      .then( result => {
+        console.log(result)
+      })
   }
 
   createNewPost(post) {
