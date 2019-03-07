@@ -8,6 +8,8 @@ export const reducer = function(state = INITIAL_STATE, action) {
   switch (action.type) {
     case 'ADD_POST':
       return state.merge({ items: [...state.items, action.post] })
+    case 'SUCCESS_FETCH_POSTS':
+      return state.merge({ items: [...state.items, ...action.posts] })
     default:
       return state
   }
@@ -30,9 +32,10 @@ export const actions = {
       type: 'FAILED_TO_FETCH_POSTS'
     }
   },
-  successFetchPosts: function() {
+  successFetchPosts: function(posts) {
     return {
-      type: 'SUCCESS_FETCH_POSTS'
+      type: 'SUCCESS_FETCH_POSTS',
+      posts
     }
   }
 }
