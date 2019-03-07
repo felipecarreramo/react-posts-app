@@ -84,3 +84,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 12. sagas-posts
 13. sagas-actions
 14. sagas-actions-result
+
+# Sources
+https://redux-saga.js.org/docs/basics/
+https://medium.com/react-redux/introducción-a-redux-js-8bdf4fe0751e
+https://carlosazaustre.es/como-funciona-redux-conceptos-basicos/
+https://carlosazaustre.es/como-funciona-flux/
+http://blog.enriqueoriol.com/2018/08/que-es-redux.html
