@@ -8,6 +8,7 @@ export default class NewPost extends Component {
   }
 
   createNewPost() {
+    
     let post = {
       title: this.state.newPostTitle,
       body: this.state.newPostBody

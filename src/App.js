@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import NewPost from './Components/NewPost';
+import { connect } from 'react-redux';
+import { actions as PostsActions } from './Redux/Posts'
 
 class App extends Component {
 
@@ -9,7 +11,7 @@ class App extends Component {
   }
 
   createNewPost(post) {
-    console.log(post)
+    this.props.createNewPost(post)
   }
 
   render() {
@@ -21,4 +23,10 @@ class App extends Component {
   }
 }
 
-export default App;
+let mapDispatchToProps = dispatch => {
+  return {
+    createNewPost: post => dispatch( PostsActions.addPost(post) ),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App);
