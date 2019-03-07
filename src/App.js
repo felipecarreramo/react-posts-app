@@ -1,50 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
+import NewPost from './Components/NewPost';
 
 class App extends Component {
 
   state = {
-    newPostTitle: "",
-    newPostBody: "",
+    post: null
   }
 
-  createNewPost() {
-    let post = {
-      title: this.state.newPostTitle,
-      body: this.state.newPostBody
-    }
-
+  createNewPost(post) {
     console.log(post)
   }
 
   render() {
     return (
       <div className="App">
-
-        <div>New Post</div>
-        <div>
-          <div>
-            <input
-              type="text"
-              placeholder="Title"
-              value={ this.state.newPostTitle }
-              onChange={ event => this.setState({ newPostTitle: event.target.value }) } />
-          </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Body"
-              value={ this.state.newPostBody }
-              onChange={ event => this.setState({ newPostBody: event.target.value }) } />
-          </div>
-          <div>
-            <button
-              onClick={ () => this.createNewPost() }>
-              New Post
-            </button>
-          </div>
-        </div>
-
+        <NewPost onReady={ post => this.createNewPost(post) } />
       </div>
     );
   }
