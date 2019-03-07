@@ -91,3 +91,7 @@ https://medium.com/react-redux/introducción-a-redux-js-8bdf4fe0751e
 https://carlosazaustre.es/como-funciona-redux-conceptos-basicos/
 https://carlosazaustre.es/como-funciona-flux/
 http://blog.enriqueoriol.com/2018/08/que-es-redux.html
+
+#presentation
+
+https://docs.google.com/presentation/d/1IUBUjEehTh8cl4nqLHl32TXf5HRPvJE5DbBCiSQL8zw/edit#slide=id.p4
