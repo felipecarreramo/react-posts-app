@@ -15,10 +15,29 @@ class App extends Component {
   }
 
   render() {
-    console.log('Posts: ', this.props.posts)
+
+    let listOfPosts = this.props.posts.map( (post, idx) => (
+      <div key={ idx }>
+        <div> Post #{idx + 1} </div>
+        <div>
+          <div>Title</div>
+          <div> { post.title } </div>
+        </div>
+        <div>
+          <div>Body</div>
+          <div> { post.body } </div>
+        </div>
+      </div>
+    ))
+
+
     return (
       <div className="App">
         <NewPost onReady={ post => this.createNewPost(post) } />
+        <div>
+          <div> Posts: </div>
+          { listOfPosts }
+        </div>
       </div>
     );
   }
