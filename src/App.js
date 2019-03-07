@@ -15,11 +15,18 @@ class App extends Component {
   }
 
   render() {
+    console.log('Posts: ', this.props.posts)
     return (
       <div className="App">
         <NewPost onReady={ post => this.createNewPost(post) } />
       </div>
     );
+  }
+}
+
+let mapStateToProps = state => {
+  return {
+    posts: state.posts.items,
   }
 }
 
@@ -29,4 +36,4 @@ let mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
